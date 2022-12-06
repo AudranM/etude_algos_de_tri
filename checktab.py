@@ -6,7 +6,7 @@ def checktab (tab: [int]) -> bool:
     post-condition: retourne vrai si le tableau est trié.
     """
     i=0
-    longueur=len(tab)
+    longueur = len(tab)
     while i+1<longueur:
         if tab[i]>=tab[i+1]:
             return False
