@@ -7,8 +7,8 @@ def checktab (tab: [int]) -> bool:
     """
     i=0
     longueur = len(tab)
-    while i+1<longueur:
-        if tab[i]>=tab[i+1]:
+    while i<longueur-1:
+        if tab[i]>tab[i+1]:
             return False
         else:
             i+=1
