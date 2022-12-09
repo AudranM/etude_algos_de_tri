@@ -17,5 +17,23 @@ Complexité:
     - Temporelle:
     - Spatiale:
 
+
 Y : Fonctionne
-Z : Fonctionne
+
+En place: 
+
+Stable: 
+
+Complexité: 
+    - Temporelle:
+    - Spatiale:
+
+Z : Ne Fonctionne Pas
+
+En place: 
+
+Stable: 
+
+Complexité: 
+    - Temporelle:
+    - Spatiale:
