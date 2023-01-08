@@ -9,8 +9,8 @@ import algo_X as X
 
 tab1 = R.random_table(50,1,100)
 print("avant tri : ",C.checktab(tab1))
-Y.algo_main(tab1)
 print (tab1)
+Z.algo_main(tab1)
 print("après tri : ", C.checktab(tab1))
-
+print (tab1)
 
