@@ -8,6 +8,7 @@ import print_time as P
 import algo_Z as Z
 import algo_Y as Y
 import algo_X as X
+import algo_perso as AP
 
 def time_to_sort (n : int, numero : int):
     i=0
@@ -18,7 +19,7 @@ def time_to_sort (n : int, numero : int):
         while i < n:
             tab1 = R.random_table(100*i,min,max)
             start = process_time()
-            X.algo_main(tab1)
+            AP.algo_main(tab1)
             timetab.append(process_time() - start)
             i = i+1 
         return timetab
@@ -27,7 +28,7 @@ def time_to_sort (n : int, numero : int):
         while i < n:
             tab1 = T.table_trie(100*i)
             start = process_time()
-            X.algo_main(tab1)
+            AP.algo_main(tab1)
             timetab.append(process_time() - start)
             i = i+1 
         return timetab
@@ -36,7 +37,7 @@ def time_to_sort (n : int, numero : int):
         while i < n:
             tab1 = IT.table_inverse(100*i)
             start = process_time()
-            X.algo_main(tab1)
+            AP.algo_main(tab1)
             timetab.append(process_time() - start)
             i = i+1 
         return timetab
