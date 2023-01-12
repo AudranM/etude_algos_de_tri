@@ -7,33 +7,25 @@ Test Algo d'origine:
 
 X : Fonctionne: OUI
 
-En place: OUI puisqu'on ne crée pas de nouveau tableau.
-
-Stable: NON car on vérifie que la valeur à classer (stockée dans tmp) est strctement inferieure à
-la valeur comparée. Au moment ou tmp sera comparé à une valeur identique à elle même, la boucle 
-continuera de tourner.
-
 Complexité: 
-    - Temporelle:
+    - Temporelle: O(n²) car une première boucle parcourre le tableau n fois, et dans cette boucle, une autre boucle parcourre le tableau n fois. 
     - Spatiale:
+        - En place: OUI puisqu'on ne crée pas de nouveau tableau.
+        - Stable: NON car on vérifie que la valeur à classer (stockée dans tmp) est strctement inferieure à la valeur comparée. Au moment ou tmp sera comparé à une valeur identique à elle même, la boucle continuera de tourner.
 
 
 Y : Fonctionne
-
-En place: 
-
-Stable: 
-
 Complexité: 
-    - Temporelle:
+    - Temporelle: O(n*log(n)) ca
     - Spatiale:
+        - En place: OUI
+        - Stable: NON puisque l'algorithme déplace les éléments vers la bonne position, donc il peut modifier l'ordre des éléments à valeurs égales.
+
 
 Z : Ne Fonctionne Pas
 
-En place: 
-
-Stable: 
-
 Complexité: 
     - Temporelle:
     - Spatiale:
+        - En place: OUI
+        - Stable: NON, car en échangeant deux valeurs, on peut inverser l'ordre dans lequel ils apparaissaient. 

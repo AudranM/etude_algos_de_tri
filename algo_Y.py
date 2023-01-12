@@ -30,9 +30,9 @@ def algo_b(tab: [int], i: int, j: int) -> None:
 			tab[i] = tab[j]
 			tab[j] = tmp
 	elif j - i > 1 :
-		m = (i+j)//2
-		algo_b(tab, i, m)
-		algo_b(tab, m+1,j)
+		m = (i+j)//2 #milieu = division entière indice min + indice max /2 
+		algo_b(tab, i, m) #appel récursif avec indice min et milieu
+		algo_b(tab, m+1,j) #appel récursif avec milieu +1 et indice max
 		algo_a(tab, i, j)
 	
 def algo_main(tab : [int]) -> None:
