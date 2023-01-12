@@ -1,0 +1,16 @@
+from numpy import *
+from random import *
+
+import algo_pero_am as P
+import random_table as R
+import checktab as C
+import algo_Z as Z
+import algo_Y as Y
+import algo_X as X
+
+tab1 = R.random_table(1000,1,100)
+print("avant tri : ",C.checktab(tab1))
+print (tab1)
+P.algo_main(tab1)
+print("après tri : ", C.checktab(tab1))
+print (tab1)
