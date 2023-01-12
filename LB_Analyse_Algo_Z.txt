@@ -1,8 +1,0 @@
-Tel quel:
-la valeur d'indice 0 ne sera comparée à son voisin qu'une fois, celle d'indice 2 que deux fois etc. 
-or l'algorithme fait remonter vers la droite la valeur la plus grande quand il compare deux valeurs.
-A droite, il y aura la valeur la plus grosse trouvée dans la partie non triée, ce qui explique que le deuxième while s'arrête
-à len(tab)-i-1, car, avant qu'on incrémente i, on aura placé à droite la plus grosse valeur trouvée de toute la partie non triée du tableau. 
-
-Correction: 
-mettre j à 0 pour reparcourir toute la partie du tableau qui n'est pas triée (la partie de gauche). 

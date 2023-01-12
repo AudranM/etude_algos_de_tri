@@ -1,5 +1,0 @@
-* Pour appeler une fonction dans un autre fichier, il faut d'abord importer ce fichier:
-        import algo_X as X
-    - ensuite, on pourra appeler n'importe quelle fonctione de ce fichier en tapant le nom donné au fichier . nom algo
-        X.algo1 (~~~~~~~~)
-        X.toto (~~~~~~~~)
