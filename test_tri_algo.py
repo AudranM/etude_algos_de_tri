@@ -1,7 +1,7 @@
 from numpy import *
 from random import *
 
-import algo_pero_am as P
+import algo_perso as P
 import random_table as R
 import checktab as C
 import algo_Z as Z
