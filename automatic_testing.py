@@ -5,6 +5,7 @@ import algo_perso as P
 import random_table as R
 import checktab as C
 import algo_Z as Z
+import algo_Z_modified as ZM
 import algo_Y as Y
 import algo_X as X
 
@@ -19,7 +20,7 @@ def automatic_testing()->None:
        taille_tab = int( input ("Entrez la taille du tableau à tester\n"))
        min_valeur = int( input ("Entrez la valeur minimum du tableau à tester\n"))
        max_valeur = int( input ("Entrez la valeur maximum du tableau à tester\n"))
-       numero_algo = int(input ("Choisissez l'algorithme: \n1 pour X \n2 pour Y \n3 pour Z \n4 pour P \n"))
+       numero_algo = int(input ("Choisissez l'algorithme: \n1 pour X \n2 pour Y \n3 pour Z \n4 pour P \n5 pour Z modifié. \n"))
        if min_valeur > max_valeur:
             print("Erreur de saisie: minimum supérieur au maximum.\nLes valeurs ont été échangées.\nLe programme va s'executer normalement.\n\n")
             tmp = max_valeur
@@ -29,7 +30,7 @@ def automatic_testing()->None:
        
     elif type_tri == 2:
         nombre_tableaux = int( input ("Entrez le nombre de tableaux à tester\n"))
-        numero_algo = int(input ("Choisissez l'algorithme: \n1 pour X \n2 pour Y \n3 pour Z \n4 pour P \n"))
+        numero_algo = int(input ("Choisissez l'algorithme: \n1 pour X \n2 pour Y \n3 pour Z \n4 pour P \n5 pour Z modifié. \n"))
         print("Merci de patienter pendant le traitement de votre demande\n")
         test_tri_boucle (nombre_tableaux, numero_algo)
     else:
@@ -56,45 +57,55 @@ def test_tri_boucle( nombre_tableaux : int, numero_algo: int) -> None:
             Z.algo_main(tab1)
         elif numero_algo == 4:
             P.algo_main(tab1)
+        elif numero_algo == 5:
+            ZM.algo_main(tab1)
             
         if C.checktab(tab1) == False :
-            print ("Le tableau n'a pas été trié. Le problème est survenu lors de la vérification du tableau numéro", i+1)
+            print ("Le tableau numéro ", i+1, " n'a pas été trié\n")
             fonctionne = False
+        else :
+            print ("Le tableau numéro ", i+1, " a été trié\n")
         i+=1
         
     if fonctionne:
-        print("L'algoritme fonctionne sur les ", nombre_tableaux, " tableaux testés\n")
+        print("\n\nChacun des ", nombre_tableaux, " tableaux testés étaient trié à la fin de l'exécution de l'algorithme.\n")
+    else:
+        print("\n\nDes problèmes sont survenus lors du tri des tableaux.\n")
 
     
 def test_tri_detail(taille_tab: int, min_valeur: int, max_valeur: int, numero_algo: int)-> None:
     """
-    pre-cond: min_valeur < max_valeur, numero_algo = 1 ou 2 ou 3 ou 4
+    pre-cond: min_valeur < max_valeur, numero_algo = 1 ou 2 ou 3 ou 4 ou 5
     post-cond: 
     """
+    deja_trie = False
     tab1 = R.random_table(taille_tab,min_valeur,max_valeur)
     if C.checktab(tab1):
         print("Le tableau était déjà trié avant intervention de l'algorithme")
+        deja_trie = True
     else:
         print("Le tableau n'était pas trié avant intervention de l'algorithme :")
         print(tab1)
-
         
-    if numero_algo == 1:
-        X.algo_main(tab1)
-    elif numero_algo == 2:
-        Y.algo_main(tab1)
-    elif numero_algo == 3:
-        Z.algo_main(tab1)
-    elif numero_algo == 4:
-        P.algo_main(tab1)
-
-        
-    if C.checktab(tab1):
-        print("Le tableau a bien été trié : ")
-        print(tab1)
-    else:
-        print ("Le tableau n'a pas été trié : ")
-        print(tab1)
+    if deja_trie == False:
+            
+        if numero_algo == 1:
+            X.algo_main(tab1)
+        elif numero_algo == 2:
+            Y.algo_main(tab1)
+        elif numero_algo == 3:
+            Z.algo_main(tab1)
+        elif numero_algo == 4:
+            P.algo_main(tab1)
+        elif numero_algo == 5:
+            ZM.algo_main(tab1)
+            
+        if C.checktab(tab1):
+            print("Le tableau a bien été trié : ")
+            print(tab1)
+        else:
+            print ("Le tableau n'a pas été trié : ")
+            print(tab1)
 
         
 automatic_testing ()
