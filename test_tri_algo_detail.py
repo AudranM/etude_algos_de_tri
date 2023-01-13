@@ -16,7 +16,7 @@ else:
     print("Le tableau n'était pas trié avant intervention de l'algorithme :")
     print(tab1)
 
-X.algo_main(tab1)
+Z.algo_main(tab1)
 
 if C.checktab(tab1):
     print("Le tableau a bien été trié : ")

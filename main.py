@@ -1,4 +1,4 @@
-import time_to_sort_copie as T
+import time_to_sort as T
 import print_time as P
 import pandas as pd
 
