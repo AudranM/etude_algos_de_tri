@@ -18,7 +18,7 @@ def algo_main (tab: [int]) -> [int]:
         i+=1
 
 
-def recherche_min(tab : [int], x : int) -> numpy.ndarray:
+def recherche_min(tab : [int], x : int) -> list:
     i = x
     min = tab[i]
     indice_min = i
