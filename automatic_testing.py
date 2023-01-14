@@ -14,7 +14,7 @@ def automatic_testing()->None:
     pre-cond: /
     post-cond: /
     """
-    type_tri = int(input ("Bonjour.\nTapez 1 si vous souhaitez tester le tri d'un tableau en détail.\nTapez 2 si vous souhaitez tester le tri de plusieurs tableaux de taille 100.\n"))
+    type_tri = int(input ("Bonjour.\nTapez 1 si vous souhaitez tester le tri d'un tableau en détail.\nTapez 2 si vous souhaitez tester le tri de plusieurs tableaux de taille exponentielle.\n"))
 
     if type_tri == 1:
        taille_tab = int( input ("Entrez la taille du tableau à tester\n"))
@@ -45,7 +45,7 @@ def test_tri_boucle( nombre_tableaux : int, numero_algo: int) -> None:
     i=0
     fonctionne = True
     while i<nombre_tableaux:
-        tab1 = R.random_table(100,1,100)
+        tab1 = R.random_table(100*i,1,100)
         if C.checktab(tab1):
             print("Le tableau", i, " était déjà trié avant intervention de l'algorithme\n")
             
