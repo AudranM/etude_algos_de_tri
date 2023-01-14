@@ -1,0 +1,2 @@
+Pour lancer les algorithmes de création de courbe, ouvrez main.py et exécutez-le. 
+Pour lancer le test des algorithmes de tri automatisé, ouvrez automatic_testing puis exécutez-le. 
