@@ -1,11 +1,15 @@
 import time_to_sort_copie as T
 import print_time as P
-import pandas as pd
+import csv
+
 
 tab = T.time_to_sort ()
 print(tab)
 P.print_time(tab)
 
-col1 = "X"
-data = pd.DataFrame({col1:tab})
-data.to_excel('sample_data.xlsx', sheet_name='sheet1', index=False)
+with open('data2.csv','w',newline='') as fichiercsv:
+    writer=csv.writer(fichiercsv)
+    i = 0
+    while i < len(tab):
+        writer.writerow([tab[i]])
+        i+=1

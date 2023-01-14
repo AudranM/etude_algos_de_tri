@@ -5,10 +5,11 @@ import random_table as R
 import tab_trie as T
 import tab_inversement_trie as IT
 import print_time as P
-import algo_Z as Z
+import algo_Z_modified as Z
 import algo_Y as Y
 import algo_X as X
 import NEWalgo_perso as AP
+import checktab as C
 
 def time_to_sort ():
     i=0
